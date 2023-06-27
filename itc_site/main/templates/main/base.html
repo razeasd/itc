@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{%block title%}{%endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-2 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Coat_of_Arms_of_Buryatia.svg/1200px-Coat_of_Arms_of_Buryatia.svg.png" width="50" height="50" class="me-2" viewBox="0 0 118 94">
+            <span class="fs-5">Государственное бюджетное учреждение Республики Бурятия «Информационно-технологический центр»</span> </a>
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'home'%}">Главная</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'about'%}">О нас</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'contacts'%}">Контакты</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'docs'%}">Документы</a>
+      </nav>
+    </div>
+    <div class = "container">
+            {%block content%}{%endblock %}
+    </div>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+     <div class="row">
+            <div class = "col-md-3">
+              <ul class="container">
+              <li>ГБУ РБ «Информационно-технологический центр»</li>
+              <li>Адрес: ул. Ранжурова,8, каб. 406 </li>
+              <li><a href="mailto:itc@govrb.ru"> itc@govrb.ru</a></li>
+              </ul>
+            </div>
+            <div class = col-md-6>
+                <a align = "right" class="dg-widget-link" href="http://2gis.ru/ulanude/firm/5207815350133842/center/107.58576393127443,51.83576426137819/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Улан-Удэ</a><div class="dg-widget-link"><a href="http://2gis.ru/ulanude/firm/5207815350133842/photos/5207815350133842/center/107.58576393127443,51.83576426137819/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.ru/ulanude/center/107.585829,51.834628/zoom/16/routeTab/rsType/bus/to/107.585829,51.834628╎Администрация Главы Республики Бурятия и Правительства Республики Бурятия?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Администрация Главы Республики Бурятия и Правительства Республики Бурятия</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":500,"height":400,"borderColor":"#a3a3a3","pos":{"lat":51.83576426137819,"lon":107.58576393127443,"zoom":16},"opt":{"city":"ulanude"},"org":[{"id":"5207815350133842"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript></div>
+            </div>
+  </footer>
+
+</body>
+</html>

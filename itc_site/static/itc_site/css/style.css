@@ -45,9 +45,9 @@ body {
 .glass-btn a:before {
     content: "";
     position: absolute;
-    top: 15;
+    top: 25;
     left: 10;
-    width: 50%;
+    width: 90%;
     height: 100%;
     background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
     transform: skewX(45deg) translate(0);
@@ -55,22 +55,22 @@ body {
     filter: blur(0px);
 }
 .glass-btn:hover a:before {
-    transform: skewX(45deg) translate(200px);
+    transform: skewX(45deg) translate(100px);
 }
 .glass-btn a:after {
     content: "";
     position: absolute;
-    top: 75%;
+    top: 25%;
     left: 100%;
-    width: 55;
-    height: 60;
+    width: 35;
+    height: 10;
     transition: 1.8s;
-    border-radius: 30px;
+    border-radius: 90px;
     z-index: -1;
 }
 .glass-btn:hover a:after {
-    left: 75;
-    top: 20;
+    left: 15;
+    top: 70;
     width: 40%;
     height: 70%;
 }
@@ -80,18 +80,18 @@ body {
     left: 50%;
     transform: translatex(-50%);
     bottom: -2px;
-    width: 25px;
-    height: 5px;
+    width: 55px;
+    height: 10px;
     background: #f00;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 1.5s;
-    transition-delay: 0.5;
+    transition-delay: 0.8;
 }
 .glass-btn:hover:before {
-    bottom: 10;
-    height: 50%;
-    width: 70%;
-    border-radius: 20px;
+    bottom: 20;
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
 }
 .glass-btn.glass-btn-red a:after,
 .glass-btn.glass-btn-red:before {
@@ -166,4 +166,82 @@ body {
 }
 .list1b li:hover:after {
 	width: 100%;
+}
+
+
+
+.glass {
+	height: 400px;
+	width: 68%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("http://baikalrb.ru/upload/resize_cache/iblock/d98/710_1420_1/d9807a85ceff48c82e377743fee3c003.jpg") center no-repeat;
+}
+.glass span {
+	position: relative;
+	text-align: center;
+	color: #FFF;
+	width: 80%;
+	font-size: 36px;
+	line-height: 40px;
+	padding: 40px 0;
+	box-shadow: 0 7px 35px rgba(0,0,0,0.2), 0 16px 28px rgba(0,0,0,0.2);
+	text-shadow: 0 0 12px rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	font-family: 'Roboto', Tahoma, sans-serif;
+	letter-spacing: 4px;
+	z-index: 1;
+	overflow: hidden;
+}
+.glass span:before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	height: 200%;
+	width: 200%;
+	background: url("background.jpg") center no-repeat;
+	filter: blur(8px);
+	z-index: -1;
+}
+
+.social-icons-5 {
+	list-style: none;
+    margin: 10px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.social-icons-5 a {
+	text-decoration: none;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	margin: 0 6px;
+	font-size: 26px;
+	background: #337AB7;
+	transition: border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+	transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+	transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+}
+.social-icons-5 a img {
+	width: 26px;
+	height: 26px;
+}
+.social-icons-5 a i,
+.social-icons-5 a img {
+	transition: transform 0.4s linear 0s;
+}
+.social-icons-5 a:hover {
+	transform: rotate(360deg);
+	border-radius: 50%;
+}
+.social-icons-5 a:hover i,
+.social-icons-5 a:hover img {
+	transform: rotate(-360deg);
 }

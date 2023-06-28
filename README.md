@@ -2,14 +2,14 @@
 
 Django, HTML5 + CSS
 Trial site site will be disabled on Thursday 28 September 2023 http://raze33.pythonanywhere.com/ 
-
-![image](https://github.com/razeasd/itc/assets/66547997/ad78442f-fe2a-4e3b-a580-64e71257c58b)
+  
+  ![image](https://github.com/razeasd/itc/assets/66547997/ad78442f-fe2a-4e3b-a580-64e71257c58b)
 
 # Security
 # X-XSS-Protection
 Межсайтовый скриптинг (Cross-Site Scripting), или XSS, – это метод, который злоумышленники могут использовать для внедрения своего собственного кода на ваш сайт. С помощью этого вида атаки можно например, добавить ложный контент или шпионить за пользователями, чтобы украсть их пароли. Настройка заголовка X-XSS-Protection для использования «block mode» обеспечивает дополнительную безопасность. Это настройка указывает браузеру полностью блокировать страницы с обнаруженными атаками XSS, в случае, если они содержат другие проблемные элементы.
 
-#Web-app deploy instruction 
+# Web-app deploy instruction 
 Visit and register https://www.pythonanywhere.com/
 
 Push your project to github

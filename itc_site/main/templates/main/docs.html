@@ -1,6 +1,25 @@
 {%extends 'main/base.html' %}
+
+{% load static %}
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'itc_site/css/style.css' %}">
+{%endblock%}
+
 {% block title %}
 Документы
 {%endblock%}
 
-
+{% block content %}
+    <p class="col-xs-2 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-12 bg-light shadow-sm py-3 item-block" align="center"><b>Нормативные документы</b></p>
+<ul class="list1b">
+    <li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/%D1%80%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D1%82%2018.01.18.%20%E2%84%9611%20%D0%A0%D0%B5%D0%B3%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D1%82%D0%B5%D1%85%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B8.pdf"> Приказ Администрации Главы РБ и Правительства РБ от 18.01.2018 №11 О вводе в эксплуатацию системы технической поддержки инфраструктуры электронного правительства</a></li>
+	<li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/357%20%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5.pdf">Постановление Правительства Республики Бурятия от 17.06.2022 № 357 «О создании государственного бюджетного учреждения
+    «Информационно-технологический центр»</a></li>
+	<li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/%D0%9E%D1%82%D1%87%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E%202022.pdf"> Отчет о выполнении государственного задания за 2022 </a></li>
+    <li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/%D0%9F%D1%80%D0%B8%D0%BA%D0%B0%D0%B7%20%D0%BE%D0%B1%20%D1%83%D1%82%D0%B2%20%D0%93%D0%97%202023.pdf">Приказ об утверждении государственного задания государственному бюджетному учреждению Республики Бурятия «Информационно-технологический центр» от 11.01.2023</a></li>
+	<li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/docs/%D0%A0%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D1%82%2001.06.2023%20%E2%84%9669.pdf">Об утверждении значений нормативных затрат на выполнение работ по техническому сопровождению от 01.06.2023</a></li>
+	<li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/docs/%D0%9F%D1%80%D0%B8%D0%BA%D0%B0%D0%B7%20%D0%BE%D0%B1%20%D1%83%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8.pdf">Приказ об утверждении государственного задания государственному бюджетному учреждению Республики Бурятия «Информационно-технологический центр»</a></li>
+    <li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/docs/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%B2_%D0%BE%D1%82%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%B8%D0%B8_%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8_%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D0%93%D0%91%D0%A3.pdf">Политика в отношении обработки персональных данных в Государственном бюджетном учреждении Республики Бурятия «Информационно-технологический центр»</a></li>
+     <li><a href = "https://egov-buryatia.ru/agip/about_authority/podved-agip-rb/itc/docs/Ustav.pdf">Устав ГБУ РБ «Информационно-технологический центр»</a></li>
+</ul>
+{%endblock%}

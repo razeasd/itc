@@ -1,8 +1,9 @@
-<h1 align="center">Site for ITC </h1>
+<h1 align="center">Site for ITC</h1> 
 
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-  
-  Trial site site will be disabled on Thursday 28 September 2023   
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
+
+  ![image](https://img.shields.io/badge/onwork-text)   
+  Trial site  will be disabled on Thursday 28 September 2023   
   http://raze33.pythonanywhere.com/
   
 # Web-app scheme

@@ -68,15 +68,15 @@ h2 {
     font-family: 'Playfair Display SC', serif;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 23px;
+    font-size: 22px;
     color: #222222;
     text-align: center;
 }
 
 .nav_link{
-    position: relative;
+    position: sticky;
     top: 1px;
-    left: 750px;
+    left: 80%;
     text-decoration:none;
     color: #046fc2;
 }
@@ -255,7 +255,7 @@ h2 {
 
 .glass {
 	height: 400px;
-	width: 68%;
+	width: 1312px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -265,15 +265,15 @@ h2 {
 	position: relative;
 	text-align: center;
 	color: #FFF;
-	width: 80%;
-	font-size: 36px;
+	width: 54%;
+	font-size: 34px;
 	line-height: 40px;
-	padding: 40px 0;
+	padding: 41px 0;
 	box-shadow: 0 7px 35px rgba(0,0,0,0.2), 0 16px 28px rgba(0,0,0,0.2);
 	text-shadow: 0 0 12px rgba(0,0,0,0.6);
 	text-transform: uppercase;
 	font-family: 'Roboto', Tahoma, sans-serif;
-	letter-spacing: 4px;
+	letter-spacing: 5px;
 	z-index: 1;
 	overflow: hidden;
 }
@@ -284,7 +284,6 @@ h2 {
 	left: -50%;
 	height: 200%;
 	width: 200%;
-	background: url("background.jpg") center no-repeat;
 	filter: blur(8px);
 	z-index: -1;
 }

@@ -1,0 +1,25 @@
+{%extends 'main/base.html' %}
+
+{% load static %}
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'itc_site/css/style.css' %}">
+{%endblock%}
+
+{% block title %}
+Структура
+{%endblock%}
+
+{% block content %}
+
+<div class="nesolestag-enadenud">
+  <p class="col-xs-2 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-12 bg-light shadow-sm py-3 item-block" align="center"><b>Руководство</b></p>
+          <br>
+          <p> <b>Руководитель:</b> Бертунова Бэлигма Базаровна </p>
+          <p>Контактный телефон: +7 (3012) 212-700</p> <p>
+          <b>Заместитель руководителя :</b> Лебедев Алексей Юрьевич  </p>
+          <p>Контактный телефон: +7 (3012) 212-700 (702)</p>
+          <p> <b>Главный бухгалтер:</b> Ефремова Александра Геннадьевна </p>
+          <p>Контактный телефон: +7 (3012) 212-700 (703)</p> <p>
+    <br>
+
+{%endblock%}

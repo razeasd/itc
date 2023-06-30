@@ -1,0 +1,35 @@
+{%extends 'main/base.html' %}
+
+{% load static %}
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'itc_site/css/style.css' %}">
+{%endblock%}
+
+{% block title %}
+Структура
+{%endblock%}
+
+{% block content %}
+<p class="structure col-xs-5 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-12 bg-light shadow py-4 item-block" align="center">
+    <a href="{% url 'aup'%}"><b>Административно-управленческий персонал</b></a></p>
+<hr>
+<div class="container1">
+
+    <div class="cod">
+        <span>Отдел ОСА</span>
+    </div>
+
+    <div class="ib">
+        <span>Отдел ИБ</span>
+    </div>
+
+    <div class="tio">
+        <span>Отдел ТИО</span>
+    </div>
+
+    <div class="ais">
+        <span>Отдел АИС</span>
+    </div>
+</div>
+
+{%endblock%}

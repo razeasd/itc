@@ -13,3 +13,9 @@ def contacts(request):
 
 def docs(request):
     return render(request,'main/docs.html')
+
+def structure(request):
+    return render(request, 'main/structure.html')
+
+def aup(request):
+    return render(request, 'main/aup.html')

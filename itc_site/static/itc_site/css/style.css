@@ -1,14 +1,82 @@
 /*фон*/
-body {
-    background-color: #fafafa;
-    overflow-x: hidden;
-}
 
 /*Текст на главной*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Roboto+Condensed:wght@300&display=swap');
 p1 {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 25;
+    font-size: 22px;
+}
+
+/*Меню*/
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #f2f2f2;
+    overflow-x: hidden;
+}
+nav {
+    margin: 0 0 0 720px;
+    padding: 0;
+    display: block;
+}
+nav ul {
+    list-style: none;
+    margin-right: -520px;
+    margin-top: 13px;
+    padding: 5px;
+}
+.topmenu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.topmenu > li {
+    width: 19%;
+    float: left;
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.topmenu > li > a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #046fc2;
+    padding: 11px 21px;
+}
+.topmenu li a:hover { color: #D5B45B; }
+.submenu-link:after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    color: inherit;
+    margin-left: 5px;
+}
+.submenu {
+    background: #273037;
+    position: absolute;
+    left: 0;
+    top: 68%;
+    z-index: 5;
+    width: 115px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: 0.7s ease-in-out;
+}
+.submenu a {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0;
+    font-size: 15px;
+}
+.submenu li:last-child a { border-bottom: none; }
+.topmenu > li:hover .submenu {
+    opacity: .9;
+    transform: scaleY(1);
 }
 
 /*Лого*/
@@ -22,13 +90,14 @@ p1 {
 	color: #046fc2;
 	font-family: 'Playfair Display SC', serif;
 	letter-spacing: 1px;
-	line-height: 15px;
+	line-height: 11px;
 	text-decoration: none;
 	font-size: 24px;
+	padding-left: 35px;
 	font-variant: small-caps;
 	text-shadow: 1px 1px #ffffff, 1px 1px;
 	transition: color 1.5s ease-in-out;
-	margin-bottom: 20px;
+	margin-bottom: 17px;
 }
 .logotype4 b {
 	font-variant: normal;
@@ -36,6 +105,7 @@ p1 {
 .logotype4 div {
 	position: absolute;
 	font-size: 21px;
+	padding-left: 55px;
 	transition: all 0.8s ease-in-out;
 	letter-spacing: 0;
 	left: 0;
@@ -64,21 +134,14 @@ p1 {
 
 /*фикс баннер*/
 @import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic|Playfair+Display+SC:400,700&subset=latin,cyrillic);
-h2 {
+h3 {
     font-family: 'Playfair Display SC', serif;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 22px;
-    color: #222222;
-    text-align: center;
-}
-
-.nav_link{
-    position: sticky;
-    top: 1px;
-    left: 80%;
-    text-decoration:none;
+    font-size: 23px;
+    padding-left: 22px;
     color: #046fc2;
+    text-align: center;
 }
 
 .sticky {
@@ -86,9 +149,8 @@ h2 {
     top: 0;
     z-index: 999999;
     font-family: 'Playfair Display SC', serif;
-    font-size: 18px;
+    font-size: 14px;
 }
-
 
 /*Кнопки*/
 .glass-btn {
@@ -506,15 +568,15 @@ h2 {
     object-fit: cover;
 }
 .grid-item:hover .image img  {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 .info h2 {
     font-family: 'Roboto', Тahoma, sans-serif;
     color: #337AB7;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: normal;
-    margin: 5;
+    margin: 15;
     text-align: center;
 }
 .info-text p {
@@ -522,10 +584,10 @@ h2 {
     display: -webkit-box; /* Включаем флексбоксы */
     -webkit-box-orient: vertical; /* Вертикальная ориентация */
     overflow: hidden; /* Обрезаем всё за пределами блока */
-    font-size: 17px;
+    font-size: 19px;
     line-height: 21px;
 	font-family: 'Playfair Display SC', serif;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
 }
 
 .info-text p:last-child {
@@ -545,7 +607,7 @@ h2 {
     margin: 3px;
     text-decoration: none;
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     padding: 12px 35px;
     color: #FFF;
@@ -580,3 +642,169 @@ h2 {
 .atuin-btn:focus:before {
     transform: translateX(0);
 }
+
+/*О нас/разделитель*/
+hr {
+    border: none;
+    height: 3px;
+    margin: 40px 0;
+    background-image: linear-gradient(to right, #FFF, #0255f0, #FFF);
+}
+hr:before,
+hr:after {
+    content: '';
+    display: inline-block;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #BFE2FF;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+}
+hr:after {
+    animation: anim-hr 1s linear infinite;
+}
+@keyframes anim-hr {
+    0% {
+        width: 40px;
+        height: 40px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+/*Структура*/
+
+.cod {
+	height: 300px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("https://timeweb.com/ru/community/article/c5/c5490a9f68fac83b83287dd2c4809fd4.jpg");
+}
+.cod span {
+	position: relative;
+	text-align: center;
+	color: #FFF;
+	width: 80%;
+	font-size: 34px;
+	line-height: 40px;
+	padding: 41px 0;
+	box-shadow: 0 7px 35px rgba(0,0,0,0.2), 0 16px 28px rgba(0,0,0,0.2);
+	text-shadow: 0 0 12px rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	font-family: 'Playfair Display SC', serif;
+	letter-spacing: 5px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.ib {
+	height: 300px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("https://cisoclub.ru/wp-content/uploads/an-introduction-to-information-security-risk-assessment.jpg");
+}
+.ib span {
+	position: relative;
+	text-align: center;
+	color: #FFF;
+	width: 80%;
+	font-size: 34px;
+	line-height: 40px;
+	padding: 41px 0;
+	box-shadow: 0 7px 35px rgba(0,0,0,0.2), 0 16px 28px rgba(0,0,0,0.2);
+	text-shadow: 0 0 12px rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	font-family: 'Playfair Display SC', serif;
+	letter-spacing: 5px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.tio {
+	height: 300px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("https://almamater13.ru/800/600/https/pbs.twimg.com/media/E8n7qAaWYAIt8pV.jpg");
+}
+.tio span {
+	position: relative;
+	text-align: center;
+	color: #FFF;
+	width: 80%;
+	font-size: 34px;
+	line-height: 40px;
+	padding: 41px 0;
+	box-shadow: 0 7px 35px rgba(0,0,0,0.2), 0 16px 28px rgba(0,0,0,0.2);
+	text-shadow: 0 0 12px rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	font-family: 'Playfair Display SC', serif;
+	letter-spacing: 5px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.ais {
+	height: 300px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("https://vuzopedia.ru/storage/app/uploads/public/5e9/a57/698/5e9a5769846d1301855150.jpg");
+}
+.ais span {
+	position: relative;
+	text-align: center;
+	color: #FFF;
+	width: 80%;
+	font-size: 34px;
+	line-height: 40px;
+	padding: 41px 0;
+	box-shadow: 0 7px 35px rgba(0,0,0,0.2), 0 16px 28px rgba(0,0,0,0.2);
+	text-shadow: 0 0 12px rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	font-family: 'Playfair Display SC', serif;
+	letter-spacing: 5px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.container1 {
+  display: flex;
+  grid-gap: 10px;
+  grid-template-areas: "h h h h"
+                       "a1 a2 a3 a4"
+                       "f f f f";
+}
+
+.header { grid-area: h; }
+.art.first { grid-area: a1; }
+.art.second { grid-area: a2; }
+.art.third { grid-area: a3; }
+.art.fourth { grid-area: a4; }
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-areas: "h"
+                         "a1"
+                         "a2"
+                         "a3"
+                         "a4"
+                         "f";
+  }
+}
+
+a {
+    text-decoration: none;
+ }

@@ -11,19 +11,18 @@ p1 {
 
 * { box-sizing: border-box; }
 body {
-    margin: 0;
+    margin: 10;
     background: #f2f2f2;
     overflow-x: hidden;
 }
 nav {
-    margin: 0 0 0 720px;
-    padding: 0;
+    margin: 0 0 0 710px;
     display: block;
 }
 nav ul {
     list-style: none;
-    margin-right: -520px;
-    margin-top: 13px;
+    margin-right: -480px;
+    margin-top: 10px;
     padding: 5px;
 }
 .topmenu:after {
@@ -32,7 +31,7 @@ nav ul {
     clear: both;
 }
 .topmenu > li {
-    width: 19%;
+    width: 20%;
     float: left;
     position: relative;
     font-family: 'Roboto Condensed', sans-serif;
@@ -43,7 +42,7 @@ nav ul {
     font-weight: bold;
     text-decoration: none;
     color: #046fc2;
-    padding: 11px 21px;
+    padding: 6px;
 }
 .topmenu li a:hover { color: #D5B45B; }
 .submenu-link:after {
@@ -56,7 +55,7 @@ nav ul {
     background: #273037;
     position: absolute;
     left: 0;
-    top: 68%;
+    top: 75%;
     z-index: 5;
     width: 115px;
     opacity: 0;
@@ -90,7 +89,7 @@ nav ul {
 	color: #046fc2;
 	font-family: 'Playfair Display SC', serif;
 	letter-spacing: 1px;
-	line-height: 11px;
+	line-height: 13px;
 	text-decoration: none;
 	font-size: 24px;
 	padding-left: 25px;
@@ -845,6 +844,155 @@ a {
 	z-index: -1;
 }
 .list5a li:hover:before {
-	width: 100%;
+	width: 70%;
 	opacity: 1;
+}
+
+/*corruption*/
+.list3a {
+	padding:0;
+	list-style: none;
+	counter-reset: li;
+}
+.list3a li {
+	position: relative;
+	border-left: 4px solid #337AB7;
+	padding:16px 20px 16px 28px;
+	margin:12px 0 12px 80px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.list3a li:before {
+	line-height: 32px;
+	position: absolute;
+	top: 10px;
+	left:-80px;
+	width:80px;
+	text-align:center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #77AEDB;
+	counter-increment: li;
+	content: counter(li);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.list3a li:hover:before {
+	color: #337AB7;
+}
+.list3a li:after {
+    position: absolute;
+    top: 26px;
+    left: -40px;
+    width: 60px;
+    height: 60px;
+    border: 8px solid #3399FF;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.1);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.1);
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    pointer-events: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.list3a li:hover:after {
+    opacity: 0.2;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+
+summary {
+  &::-webkit-details-marker { display: none; }
+  &::-moz-list-bullet { list-style-type: none; }
+  // display: block; - не всегда уместно
+}
+// Иконка маркера в base64
+$img-marker: 'data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=';
+
+details {
+
+  // Косметические улучшения
+  position: relative;
+  margin-bottom: .5rem;
+  min-height: 1rem;
+  max-height: 3rem;
+  transition: min-height .15s linear, max-height .5s linear;
+  -webkit-transition: min-height .15s linear, max-height .15s linear;
+  overflow: hidden;
+
+  // Заголовок
+  summary {
+
+    // Удаление стандартного маркера
+    &::-webkit-details-marker { display: none; }
+    &::-moz-list-bullet { list-style-type: none; }
+
+    // Ограничение кликабельной области заголовка
+    display: inline-block;
+
+    // Пространство для маркера
+    padding-left: 1.5em;
+
+    // Косметические улучшения
+    cursor: pointer;
+    outline: 0;
+    transition: color .12s;
+    -webkit-transition: color .12s;
+    span { border-bottom: 1px currentColor dotted; }
+    &:hover { color: #d06c6c; }
+
+    // Добавление маркера
+    &::before {
+      content: "";
+      left: 0;
+      top: .4em;
+      position: absolute;
+      background: url($img-marker) no-repeat 50% 50% / 1em 1em;
+      width: 1em;
+      height: 1em;
+      transition: transform .1s linear;
+      -webkit-transition: transform .1s linear;
+    }
+
+    // Контент, стоящий после заголовка
+    & ~ * {
+      padding-left: 1.5em;
+      opacity: 0;
+      transition: opacity .15s linear;
+      -webkit-transition: opacity .15s linear;
+    }
+
+  }
+
+  // Открытый спойлер
+  &[open] {
+    min-height: 2em;
+    max-height: 20em;
+    summary {
+      color: #d06c6c;
+
+      & ~ * {
+        opacity: 1;
+      }
+      &:before {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+      }
+
+    }
+
+  }
+
 }

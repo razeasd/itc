@@ -22,3 +22,6 @@ def aup(request):
 
 def projects(request):
     return render(request, 'main/projects.html')
+
+def corruption(request):
+    return render(request, 'main/corruption.html')

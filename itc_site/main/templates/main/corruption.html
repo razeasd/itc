@@ -1,0 +1,50 @@
+{%extends 'main/base.html' %}
+
+{% load static %}
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'itc_site/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'itc_site/files/met.doc' %}">
+{%endblock%}
+
+{% block title %}
+Противодействие коррупции
+{%endblock%}
+
+{% block content %}
+
+<p class="structure col-xs-5 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-12 bg-light shadow py-4 item-block" align="center">
+<b>Материалы по антикоррупционному просвящению граждан</b></p>
+
+
+<ul class="list3a">
+    <li><a href="http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603637722">Указ Президента РФ</a></li>
+    <li><a href="https://mintrud.gov.ru/ministry/programms/anticorruption/015/0" target="_blank">Методические рекомендации по разработке и принятию организациями мер
+по предупреждению и противодействию коррупции
+</a></li>
+    <li><a href="https://www.consultant.ru/document/cons_doc_LAW_82959/">ФЗ от 25.12.2008 №273-ФЗ о противодействии коррупции</a></li>
+    <li>Элемент списка</li>
+    <li>Элемент списка</li>
+</ul>
+<br>
+<hr>
+
+<section>
+  <h2>Часто задаваемые вопросы</h2>
+  <details>
+    <summary tabindex="1"><span>Question #1</span></summary>
+    <p>Answer #1</p>
+  </details>
+  <details>
+    <summary tabindex="2"><span>Question #2</span></summary>
+    <p>Answer #2</p>
+  </details>
+  <details>
+    <summary tabindex="3"><span>Question #3</span></summary>
+    <p>Answer #3</p>
+  </details>
+<section>
+
+
+<footer class="pt-1 my-md-5 pt-md-1 border-top">
+</footer>
+{%endblock%}

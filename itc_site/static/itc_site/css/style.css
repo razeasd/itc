@@ -93,7 +93,7 @@ nav ul {
 	line-height: 11px;
 	text-decoration: none;
 	font-size: 24px;
-	padding-left: 35px;
+	padding-left: 25px;
 	font-variant: small-caps;
 	text-shadow: 1px 1px #ffffff, 1px 1px;
 	transition: color 1.5s ease-in-out;
@@ -105,7 +105,7 @@ nav ul {
 .logotype4 div {
 	position: absolute;
 	font-size: 21px;
-	padding-left: 55px;
+	padding-left: 45px;
 	transition: all 0.8s ease-in-out;
 	letter-spacing: 0;
 	left: 0;
@@ -148,7 +148,6 @@ h3 {
     position: sticky;
     top: 0;
     z-index: 999999;
-    font-family: 'Playfair Display SC', serif;
     font-size: 14px;
 }
 
@@ -808,3 +807,44 @@ hr:after {
 a {
     text-decoration: none;
  }
+
+/*projects*/
+
+.list5a {
+	padding:0;
+	list-style: none;
+}
+.list5a li {
+	position: relative;
+	padding: 15px 20px;
+	background: linear-gradient(to left, #ADCEE9 0%, #FFF, #ADCEE9);
+	border: 2px solid #337AB7;
+	color: #506a6b;
+	box-shadow: 0 15px 5px 0 rgba(0,0,0, .2);
+	margin-bottom: 5px;
+	text-align:center;
+	background-size: 100% 100%;
+	z-index: 1;
+}
+.list5a li:before {
+	content: "";
+	position:absolute;
+	width: 0;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	background: linear-gradient(to left, #EBF3FA 0%, #FFF, #EBF3FA);
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	z-index: -1;
+}
+.list5a li:hover:before {
+	width: 100%;
+	opacity: 1;
+}

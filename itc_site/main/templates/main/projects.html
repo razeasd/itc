@@ -1,0 +1,31 @@
+{%extends 'main/base.html' %}
+
+{% load static %}
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'itc_site/css/style.css' %}">
+{%endblock%}
+
+{% block title %}
+Проекты
+{%endblock%}
+
+{% block content %}
+<p class="structure col-xs-5 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-12 bg-light shadow py-4 item-block" align="center"><b>Деятельность</b></></p>
+<p> Основными задачами являются: </p>
+<p>Техническое обеспечение функционирования центра обработки данных Администрации Главы Республики Бурятия и Правительства Республики Бурятия.</p>
+<p>Техническое обеспечение функционирования подсистем инфраструктуры ИВС Правительства РБ (комплекс программного и аппаратного обеспечения с целью создания безопасных, отказоустойчивых и управляемых каналов передачи данных).
+</p>
+<br>
+
+<p class="structure col-xs-5 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-12 bg-light shadow py-4 item-block" align="center"><b>Наши проекты</b></></p>
+<ul class="list5a">
+    <li>Система документооборота TESSA</li>
+    <li>Элемент списка</li>
+    <li>Элемент списка</li>
+    <li>Элемент списка</li>
+    <li>Элемент списка</li>
+</ul>
+
+<footer class="pt-1 my-md-5 pt-md-1 border-top">
+</footer>
+{%endblock%}

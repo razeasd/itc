@@ -19,3 +19,6 @@ def structure(request):
 
 def aup(request):
     return render(request, 'main/aup.html')
+
+def projects(request):
+    return render(request, 'main/projects.html')

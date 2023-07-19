@@ -21,9 +21,9 @@ nav {
 }
 nav ul {
     list-style: none;
-    margin-right: -480px;
-    margin-top: 10px;
-    padding: 5px;
+    margin-right: -450px;
+    margin-top: 7px;
+    padding: 3px;
 }
 .topmenu:after {
     content: "";
@@ -263,8 +263,8 @@ h3 {
 	position: relative;
 	margin-bottom: 20px;
 	padding: 16px 10px;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
+	-webkit-transition-duration: 1.4s;
+	transition-duration: 1.4s;
 }
 .list1b li:hover {
 	z-index: 1;
@@ -281,7 +281,7 @@ h3 {
 	background: #F7FAFD;
 	counter-increment: li;
 	content: counter(li);
-	-webkit-transition-duration: 0.3s;
+	-webkit-transition-duration: 1.3s;
 	transition-duration: 0.3s;
 }
 .list1b li:hover:before {
@@ -815,11 +815,11 @@ a {
 }
 .list5a li {
 	position: relative;
-	padding: 15px 20px;
+	padding: 10px 30px;
 	background: linear-gradient(to left, #ADCEE9 0%, #FFF, #ADCEE9);
 	border: 2px solid #337AB7;
 	color: #506a6b;
-	box-shadow: 0 15px 5px 0 rgba(0,0,0, .2);
+	box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
 	margin-bottom: 5px;
 	text-align:center;
 	background-size: 100% 100%;
@@ -844,7 +844,7 @@ a {
 	z-index: -1;
 }
 .list5a li:hover:before {
-	width: 70%;
+	width: 100%;
 	opacity: 1;
 }
 
@@ -912,87 +912,208 @@ a {
 }
 
 
-summary {
-  &::-webkit-details-marker { display: none; }
-  &::-moz-list-bullet { list-style-type: none; }
-  // display: block; - не всегда уместно
-}
-// Иконка маркера в base64
-$img-marker: 'data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=';
-
-details {
-
-  // Косметические улучшения
-  position: relative;
-  margin-bottom: .5rem;
-  min-height: 1rem;
-  max-height: 3rem;
-  transition: min-height .15s linear, max-height .5s linear;
-  -webkit-transition: min-height .15s linear, max-height .15s linear;
-  overflow: hidden;
-
-  // Заголовок
-  summary {
-
-    // Удаление стандартного маркера
-    &::-webkit-details-marker { display: none; }
-    &::-moz-list-bullet { list-style-type: none; }
-
-    // Ограничение кликабельной области заголовка
+/*Форма обратной связи*/
+::-webkit-input-placeholder {font-size: 16px;}
+::-moz-placeholder {font-size: 16px;}
+:-moz-placeholder {font-size: 16px;}
+:-ms-input-placeholder {font-size: 16px;}
+:focus::-webkit-input-placeholder {opacity: 0;}
+:focus::-moz-placeholder {opacity: 0;}
+:focus:-moz-placeholder {opacity: 0;}
+:focus:-ms-input-placeholder {opacity: 0;}
+.forma {
     display: inline-block;
-
-    // Пространство для маркера
-    padding-left: 1.5em;
-
-    // Косметические улучшения
-    cursor: pointer;
-    outline: 0;
-    transition: color .12s;
-    -webkit-transition: color .12s;
-    span { border-bottom: 1px currentColor dotted; }
-    &:hover { color: #d06c6c; }
-
-    // Добавление маркера
-    &::before {
-      content: "";
-      left: 0;
-      top: .4em;
-      position: absolute;
-      background: url($img-marker) no-repeat 50% 50% / 1em 1em;
-      width: 1em;
-      height: 1em;
-      transition: transform .1s linear;
-      -webkit-transition: transform .1s linear;
-    }
-
-    // Контент, стоящий после заголовка
-    & ~ * {
-      padding-left: 1.5em;
-      opacity: 0;
-      transition: opacity .15s linear;
-      -webkit-transition: opacity .15s linear;
-    }
-
-  }
-
-  // Открытый спойлер
-  &[open] {
-    min-height: 2em;
-    max-height: 20em;
-    summary {
-      color: #d06c6c;
-
-      & ~ * {
-        opacity: 1;
-      }
-      &:before {
-        transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-      }
-
-    }
-
-  }
-
+    margin-left:465px;
+    width: 51%;
+}
+.form-at {
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 0;
+	letter-spacing: 0;
+	background: #f9f9f9;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.2);
+}
+.form-at * {
+	box-sizing: border-box;
+	font-family: Verdana, sans-serif;
+}
+.validate-input-at,
+.no-validate-input-at {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	border: 2px solid #BFE2FF;
+	border-radius: 2px;
+	margin-bottom: 20px;
+}
+.validate-input-at.w-50,
+.no-validate-input-at.w-50 {
+	width: calc(50% - 10px);
+	display: inline-block;
+}
+.validate-input-at.w-50:first-child,
+.no-validate-input-at.w-50:first-child {
+	margin-right: 20px;
+}
+.input-at {
+	display: block;
+	width: 100%;
+	background: transparent;
+	color: #000;
+}
+input.input-at {
+	height: 50px;
+	padding: 0 20px 0 20px;
+	font-size: 16px;
+	outline: none;
+	border: none;
+}
+textarea.input-at {
+	min-height: 170px;
+	padding: 18px 20px;
+	font-size: 16px;
+	line-height: 22px;
+	outline: none;
+	border: none;
+	resize: none;
+}
+textarea.input-at:focus,
+input.input-at:focus {
+	border-color: transparent;
+}
+.focus-input-at {
+	position: absolute;
+	display: block;
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	top: -1px;
+	left: -1px;
+	pointer-events: none;
+	border: 2px solid #337AB7;
+	border-radius: 2px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.4s;
+	transform: scaleX(1.1) scaleY(1.3);
+}
+.input-at:focus + .focus-input-at {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+}
+.form-at-btn {
+	position: relative;
+	display: block;
+	padding: 0 40px;
+	height: 50px;
+	background-color: #337AB7;
+	border-radius: 2px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 1.2;
+	transition: all 0.4s;
+	margin: 0 auto;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.form-at-btn:hover {
+	background-color: #333333;
+}
+.form-at-btn[disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+}
+.alert-validate::before {
+	content: attr(data-validate);
+	position: absolute;
+	max-width: 70%;
+	background-color: #fff;
+	border: 1px solid #c80000;
+	border-radius: 2px;
+	padding: 4px 25px 4px 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 12px;
+	pointer-events: none;
+	color: #c80000;
+	font-size: 13px;
+	line-height: 1.4;
+	text-align: left;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+.alert-validate::after {
+	content: "\f129";
+	font-family: "FontAwesome";
+	display: block;
+	position: absolute;
+	color: #c80000;
+	font-size: 18px;
+	font-weight: bold;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 22px;
+}
+.alert-validate:hover:before {
+	visibility: visible;
+	opacity: 1;
+}
+.error-at {
+	color: red;
+	padding: 10px 0;
+}
+.success-at {
+	color: green;
+	font-size: 28px;
+	padding: 20px 0;
+	text-align: center;
+}
+.form-at input[type=checkbox] {
+    display:none;
+}
+.form-at input[type=checkbox] + label {
+    display: block;
+    position: relative;
+    margin: 0 0 20px 34px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #333333;
+}
+.form-at input[type=checkbox] + label:before {
+	box-sizing: border-box;
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 26px;
+    line-height: 22px;
+    left: -34px;
+	border: 2px solid #BFE2FF;
+	border-radius: 2px;
+}
+.form-at input[type=checkbox]:checked + label:before{
+    content: '\2714';
+    color:#337AB7;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+	border: 2px solid #337AB7;
+}
+@media (max-width: 768px) {
+	.validate-input-at.w-50 {
+		width: 100%;
+	}
+	.validate-input-at.w-50:first-child {
+		margin-right: 0;
+	}
+	.alert-validate::before {
+		visibility: visible;
+		opacity: 1;
+	}
 }

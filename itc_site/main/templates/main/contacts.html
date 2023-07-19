@@ -1,9 +1,16 @@
 {%extends 'main/base.html' %}
+{% load static %}
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'itc_site/css/style.css' %}">
+{%endblock%}
 {% block title %}
 Контакты
 {%endblock%}
 
 {% block content %}
+    <?php
+        include 'php/1.php';
+    ?>
 
     <p class="col-xs-1 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-12 bg-light shadow-sm py-3 item-block" align="center"><b>Техническая поддержка</b></p><br>
     <p> 1. Заявка оформляется через <a href="http://helpdesk.govrb.ru"> веб-сайт</a> путем заполнения формы.</p>
@@ -52,16 +59,101 @@
 </div>
 <span class="kesednsoled"></span>
 </div>
+
 <br>
+
+<div class="forma">
+    <p class="col-xs-1 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-12 bg-light shadow-sm py-3 item-block" align="center"><b>Форма обратной связи</b></p>
+    <div class="form-at">
+        <div class="validate-input-at w-50" data-validate="Обязательное поле">
+            <input class="input-at" type="text" name="name-at" placeholder="Ваше имя" />
+            <span class="focus-input-at"></span>
+        </div>
+        <div class="validate-input-at w-50" data-validate="Обязательное поле">
+            <input class="input-at" type="text" name="email-at" placeholder="Ваш телефон или email" />
+            <span class="focus-input-at"></span>
+        </div>
+        <div class="validate-input-at" data-validate="Обязательное поле">
+            <textarea class="input-at" name="message-at" placeholder="Ваше сообщение"></textarea>
+            <span class="focus-input-at"></span>
+        </div>
+        <input checked="checked" class="input-at" id="checkbox-at" type="checkbox" name="checkbox-at" onchange="document.getElementById('submit-at').disabled = !this.checked;" />
+        <label for="checkbox-at">
+            Настоящим подтверждаю, что я ознакомлен и согласен с <a href="#rules">пользовательским соглашением</a>
+        </label>
+        <input type="hidden" name="subject-at" value="Тема формы">
+        <button id="submit-at" class="form-at-btn">Отправить</button>
+    </div>
+    <div class="result-at"></div>
+</div>
+
+<script>
+    $(function() {
+	$('.forma').each(function() {
+		var $frm = $(this);
+		var input = $(this).find('.validate-input-at .input-at');
+		var butsend = $(this).find('.form-at-btn');
+		butsend.on('click',function(){
+			var check = true;
+			for(var i=0; i<input.length; i++) {
+				if(validate(input[i]) == false){
+					showValidate(input[i]);
+					check=false;
+				}
+			}
+			// Отправка формы
+			if (check == true) {
+				$.post("/send.php", $frm.find(".form-at select, .form-at input, .form-at textarea").serialize(),
+					function(data){
+						if(data.frm_check == 'error'){
+							$frm.find(".result-at").html("<div class='error-at'>Ошибка: " + data.msg + "</div>");
+							} else {
+							$frm.find(".result-at").html("<div class='success-at'>Ваше сообщение отправлено!</div>");
+							$frm.find(".form-at").fadeOut(500);
+							$frm.find(".input-at").val("");
+						}
+					}, "json");
+					return false;
+			}
+		});
+		$('.form-at .input-at').each(function(){
+			$(this).focus(function(){
+				hideValidate(this);
+			});
+		});
+
+	});
+	function validate(input) {
+			if($(input).attr('type') == 'email' || $(input).attr('name') == 'email-at') {
+			if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+			return false;
+			}
+			}
+		if($(input).val().trim() == ''){
+			return false;
+		}
+	}
+	function showValidate(input) {
+		var thisAlert = $(input).parent();
+		$(thisAlert).addClass('alert-validate');
+	}
+	function hideValidate(input) {
+		var thisAlert = $(input).parent();
+		$(thisAlert).removeClass('alert-validate');
+	}
+});
+</script>
+
+<br>
+<footer class="pt-1 my-md-5 pt-md-1 border-top">
+</footer>
 
 <ul class="social-icons-5">
     <li><a href="https://vk.com/buryatiaofficial" target="_blank"><i class="fa-brands fa-vk"></i></a></li>
     <li><a href="https://egov-buryatia.ru/agip/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Coat_of_Arms_of_Buryatia.svg/1200px-Coat_of_Arms_of_Buryatia.svg.png"></a></li>
     <li><a href="https://t.me/buryatiaofficial" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
 </ul>
-<footer class="pt-1 my-md-5 pt-md-1 border-top">
-</footer>
-
+<br>
 {%endblock%}
 
 

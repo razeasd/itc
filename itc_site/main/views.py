@@ -25,3 +25,6 @@ def projects(request):
 
 def corruption(request):
     return render(request, 'main/corruption.html')
+
+def tour(request):
+    return render(request, 'main/tour.html')

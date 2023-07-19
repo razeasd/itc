@@ -10,4 +10,5 @@ urlpatterns = [
     path('aup', views.aup, name='aup'),
     path('projects', views.projects, name='projects'),
     path('corruption', views.corruption, name='corruption'),
+    path('tour', views.tour, name='tour'),
 ]
